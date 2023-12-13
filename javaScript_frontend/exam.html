@@ -1,0 +1,86 @@
+<!-- Movie Search: Build a movie search application that fetches movie data from the API (https://www.omdbapi.com/?apikey=${apiKey}&t=${moviename}) based on user input (moviename) and displays details such as title, Released date, actors, plot, poster and ratings.
+apikey: fa1c9c03 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+    <input type="text" placeholder="enter the movie name" id="input_name">
+    <input type="button" value="search" onclick="search()">
+    <div id="result">
+
+    </div>
+    
+</body>
+<script>
+//function definition
+function search(){
+    moviename = input_name.value
+    console.log(moviename);
+    //create a object
+    const http = new XMLHttpRequest()
+    //api connection 
+   /*  const apiKey = fa1c9c03 */
+     http.open('get',`https://www.omdbapi.com/?apikey=fa1c9c03&t=${moviename}`) 
+     //request send
+     http.send()
+     console.log(http.readyState);
+
+     http.onreadystatechange = ()=>{
+        console.log(http.readyState);
+        if (http.readyState ==4) {
+           if(http.status >=200 && http.status<300){
+                console.log(http.responseText);
+
+                let data = JSON.parse(http.responseText)
+                console.log(data);
+                let title = data.Title
+                console.log(title);
+                let date = data.Released
+                console.log(date);
+                let actors = data.Actors
+                console.log(actors);
+                let plot = data.Plot
+                console.log(plot);
+                let poster = data.Poster
+                console.log(poster);
+                let rating = data.Ratings
+                console.log(rating);
+
+                result.innerHTML = `<div class="card" style="width: 18rem;">
+                    <img src=${poster} class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">${title}</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Relaeased Date : ${date}</li>
+                        <li class="list-group-item"Actors : ${actors}</li>
+                        <li class="list-group-item">Plot: ${plot}</li>
+                        <li class="list-group-item">Ratings: 
+                            <ul>
+                                ${rating.map((item)=>`<li>${item.Source} : ${item.Value}</li>`)}
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    </div>`
+
+
+           } 
+           else{
+            console.log('no data');
+           }
+        }
+        else{
+            console.log('no data');
+        }
+     }
+}
+</script>
+</html>

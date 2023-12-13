@@ -1,0 +1,612 @@
+MODULE - II
+-----------
+
+PROCEDURAL PROGRAMMING- programming paradigm where series of computational steps are carried out.Unlike oops,where data and methods were tied together(encapsulated)in a class or object,procedural programming uses data and methods as two different entities
+
+
+
+Java Script
+-----------
+- used to give behaviour to the website
+- can be used in both frontend as well as backend
+- it is Dynamically typed language - datatype of a variable changes dynamically
+- single thread programming language - line by line execution
+- it support both procedural as well as object oriented programming(oops)
+
+-------------------
+
+1) Display contents
+  -------------------
+    console.log('content')
+    console.log('content',variable_name)
+
+
+2) Datatype
+  -----------------
+
+    1) text - string
+    2) integer - number
+    3) true or false : boolean
+
+3) Variable : used to store Data
+   ----------
+    Identifiers: Rules to create variables -
+    -----------
+          a) starts with letter(A-Z or a-z) , dollar sign($) or underscore(_) but prefer letter
+          b) subsequent character may be letters, digits,underscore or dollarsigns
+          c) two or more word -no space between 
+                                underscore can be used in between two words
+                                second word can starts with capital letter
+                                numbers can also be used
+          d)Numbers are not allowed as the first character in names                     
+    Variable names are case sensitive
+
+    syntax 
+    -------
+    variable_name = value
+    keyword variable_name = value
+    
+    keyword  variables
+    ------------------
+    1) const : no reassign of value - global scope -no hoisting - redeclaration allowed
+    2) var : can reassign value - functional level scope - hoisting allowed - redeclaration not allowed
+    3) let : can reassign value -block level scope - no hoisting - redeclaration not allowed 
+   
+    Variable Hoisting
+    -----------------
+    defining a variable before it is declared
+
+
+4) concatenation
+   -------------------
+  appending one or more datatype to the end of the other
+
+  datatype + second datatype
+
+  string + string = string
+  number +number = number
+  string + number = string
+
+  -------------
+5)   temperate literals : provides a easy way to interpolate/insert variables and expression into string
+    --------------------------
+    syntax
+    `text ${varible_name}`
+
+
+
+6) operators
+   ----------------
+
+      1) assignment Operators:     =
+      2) Arithematic operators:    + - / * % **
+      3) Relational operators:     > >= < <= == ===
+            ==   evalute only values  
+            ===  evalute both values and datatype
+      4) Logical operators
+
+         a)  AND (&&)
+            T && T = T
+            T && F = F
+            F && T = F
+            F && F = F 
+
+         b)  OR (||)
+
+            T || T = T
+            T || F = T
+            F || T = T
+            F || F = F
+          
+          c) NOT (!)
+
+            !T = F
+            !F =T 
+
+      5) incremental(++) / decremental (--) operators
+      6) short hand operators:    += -= *= /=
+      7) ternary operators
+                condition?true:false
+
+
+
+7) Conditional statement / Decision making statement : To take decision based on certain condition
+   -------------------------------------------------
+   a) if else statement
+      syntax
+
+          if(condition){
+            statement
+          }
+          else if(condition) {
+            statement
+          }
+          else{
+            statement
+          }
+
+  Refer:
+    b) Switch
+        syntax
+        ------
+         switch(condition){
+            case x:
+                  //code block
+		   break;
+            case y :
+                 //code block
+		  break;
+            default:
+                 //code block
+ 	}
+
+8) Looping statement : to do same task repeatedly
+   -----------------
+
+      1) while 
+          syntax 
+             Intializing variables
+             while(condition)
+             {
+              statement to execute
+              statement to increment the variable 
+             }
+
+      2) for
+          syntax
+          for(intializing;condition;update variable){
+            statement to execute
+          }       
+
+
+
+
+9) Nestedloop: loop within a loop - pattern printing
+   ----------
+
+
+
+
+10) Functions
+    ---------
+
+    a)function = to do specfic task repeatedly at different portion of the program   
+
+      - It has two parts
+          1) function definition
+          2) function call 
+
+            function definition
+            ---------------------
+
+            function function_name(arg1, .........argn){
+              task 
+            }
+
+            function call
+            ------------
+            function_name(arg1............argn)
+
+      - scope of a functional variable is  block level
+      - functional Hoisting : calling a function before it is defined
+        
+        
+         
+
+    b) Arrow Function
+       --------------
+        - syntax
+          variable_name = (arg1,----------argn) => {statement  }
+                
+        - functional hoisting is not possible
+        - ES6 onwords prefered function is arrow function
+
+
+
+    c) Predefined function : not defined by the user/developer but can be called at different part of the program
+       -------------------      
+            eg: console.log()
+                typeof()
+                alert()
+                parseInt()
+                Number()
+                eval(10*2)
+
+
+
+    d) Call back Function
+       ------------------
+       - calling a function inside another function
+
+
+    e) Nested function :
+       ---------------
+      -  function defining inside another function definition            
+      
+      - closure property: parent property can be accessed by the child but the child property cannot be accessed  by the parent
+
+ 
+    synchronous functions - execute immediately
+    Asynchronous function - time delay
+    Anonymous function - self executing function - it does not have any names associated with it
+
+
+
+DATA STRUCTURE : 
+--------------
+
+- A specialised formate for organizing , processing retrieving and storing data
+- eg: array, stack , queue , list, linked list , tree, graph execute
+
+
+
+11) Array
+    -----
+      - Unlike variables array can hold more than one values/data
+      - Definition: Array is a single variable that can store more than one data of different datatype that are separated by commas and enclosed within square bracket
+
+      - syntax
+        ----------
+         variable_name = [value1,value2,.......valuen]
+
+      - array can hold more than one datatype
+      - data are stored as key:value pairs in the memory
+            key : index
+            value: array item
+            
+            index = starts from 0 till length-1
+      -length : property of an array that returns total number of items  
+                value starts from 1
+
+      - Array in javaScript is Infinite
+
+      - Different ways to access array item
+          1) for - give index
+          2) for in - give index
+          3) for of - give item in the array
+
+      - Array Method
+        -----------------
+          1) push  - add item to an array at the end
+          2) unshift - add item to an array at start
+          3) pop - delete the last item of the array
+          4) shift - delete first item of the array
+          5) sort(callback)-rearrange the array in ascending(a-b) or descending order-(b-a) - no new array is formed
+          6) forEach()-  same as that of for of - return void
+          7) map(callback)-create new array having same number of elements as that of parent array
+          8) Reduce(callback)- return a single value : eg: highest ,lowest, sum
+          9) filter()- to create an array satisfying a specfic condition
+          10) flat(depth)- 2d to 1d
+          11) find()- to find a single value from the array
+          12) some()- to check a condition is true or false 
+          13) include()- to find an element is there in an array or not - return only boolean value
+          14) splice()- to remove or add items into an array at different positions
+          15) indexOf() - to find the index of an item in an array
+          16) slice(index) - remove one element at a time
+          17) reduceright()- function is same as that of reduce but iteration starts from right 
+
+      - Nested array : array inside another array
+
+12) String: Sequence of character stored at different memory locations
+    ------
+
+        string methods:
+        ------------------
+        1) startsWith : to check whether a given string starts with a particular letter/character - case sensitive
+        2) endsWith: to check whether a given string ends with a particular letter/character- case sensitive 
+        3) substring(start,end) 
+        4) toUpperCase()- to convert into capital letter
+        5) toLowerCase() - to convert into small letter
+        6) trim() - to remove extra space
+        7) slice(start,end)
+        8) split()
+        9) replace()- to replace a particular character/word from a given string- change the first matching word
+        10) replaceAll()-to replace a particular character/word from a given string- change the all matching word
+        11) array.from()-it converts string into an array
+
+
+13) objects:
+    --------
+
+    - Unlike array it can store more than one data with higher clarity
+    - Definition:object is a single variable that can store more than one data of different datatype as key:value pair, that are separated by commas and enclosed within curly bracket
+
+    to check a key in object - in
+        
+    - syntax
+      ---------
+        
+        variable_name={
+          key1:value1,
+          key2:value2,....
+          keyn:valuen
+        }
+
+    - To access item
+      ---------------
+        object_name.key
+        object_name["key"]
+
+
+    - add an item to objects
+      -------------------------
+        object_name["key"]=value
+        object.assign
+
+    - delete an item from object
+      ----------------------------
+        delete object_name.key
+
+    - To update item
+      --------------
+        object_name["key"]=value
+        object_name.key+=value - increment value , similary decrement (-=)
+
+    - Array of objects - objects inside an array
+      -----------------
+
+
+        
+OBJECT ORIENTED PROGRAMMING(oops) - It is a modern programming paradigm(style) which consider real time entity into objects and class.
+-----------------------------------
+
+   - Basic
+    ------
+
+    1) class -Blueprint which contain common feature from which different objects can be created
+    2) object - is the real time entity created from the class
+    3) reference- memory locations where properties and methods are stored
+
+   - property - the variables inside a class
+   - methods - functions inside a class
+   - instance variable  - this.property_name - to access property or method anywhere inside the class
+
+    syntax class
+    -----------
+    class classname{
+       - property
+       - constructor
+       - method
+    }
+    - it is not mandatory that all three that is property constructor method always present inside the class
+
+
+    syntax -object
+    ----------------
+      variable_name = new class_name()
+
+   - Pillars of oops
+     --------------   
+     1) Inheritance
+     2) Polymorphism
+     3) Encapsulation
+     4) Abstraction
+
+     Inheritance
+     -----------
+      Used to access methods and properties from from class to another
+      parent class - super class / base class
+      child class - drived class / sub class
+
+
+      Two type of Inheritance
+      1) classical inheritance - keyword extends 
+      2) object inheritance - keyword  __proto__
+
+      - mutilevel inheritance
+
+    
+       Polymorphism
+       -------------
+       poly - many
+       morphism - form
+
+       1) function/method overloading - methods having same name but with different arguments
+           - executes based on the number of arguments passed
+           - javascript doesnot support method overloading
+           - but the same concept is achieved using spread operators(...)
+
+       2) function/method overriding - methods with same name same number of arguments
+        -javaScript support this concept
+
+
+     Exception Handling
+     ------------------
+     - exception : run time error
+     - exceptions are handled using try-catch block
+
+     1) try - statement that may have error
+     2) catch - only execute when there is an error
+     3) finally - execute in both case(try, catch)
+
+
+     javaScript - frontend
+     ------------------------
+
+
+ Browser - it is a application program that provides a interface to interact with all informations available on the world wide web(www)
+
+ Browser engine - can read and display html element,css ,javascript 
+ javascript - cannot read directly html element css element
+
+
+ DOM - document object model
+ ---------------------------
+ -javascript can read DOM
+ - DOM is a tree structure of html document created by browser
+ - tag - object    
+
+ refer :browser object model - BOM
+   - used to interact with the browser. it is a hierarchy(tree structure) of objects that are used to manipulate methods and properties associated with the we browser
+   - it contains:
+      1) window : represents the browser window
+      2) location: contains information about the current url
+      3) History: contains information about the url visted by the user earlier
+      4) screen and naviagtor : contains information about the visitor's screen
+      5) document : contains the informations to create the DOM
+
+
+ How to apply js in html file
+ ----------------------------
+ 1) Internal js  -  <script>js code </script> - after </body>
+ 2) External js - <script src="url"> reduces complexity of html file
+                                     reduce loading time 
+
+
+how to access html elements using js
+------------------------------------
+1)document.getElementByTagName('tag_name') - to access tag/html element - return htmlcollection - similar to array but not exactly array - but hold more than one html element
+
+2)document.getElementById('id') - return corresponding tag
+
+3)document.getElementByClassName('class_name') - returns html collection
+
+4)document.querySelector('tag_name/#id/.class_name') return tag - first satisfy tag
+
+5)document.querySelectorAll('tag_name/#id/.class_name') -return nodelist  -
+
+------------------------------------------------------------
+
+
+how to access content inside a html tag
+-------------------------------------
+1) .innerHTML
+    textcontent() , document.write()
+
+Events
+---------
+definition: it is the action performed by the user which leads to some update in dom    
+1) click
+2) change
+3) keydown
+4) submit
+5) load  
+
+
+Database - to store Data
+value - stored as key: value - key should be string
+
+
+window.location="url" - to automaticaly navigate to the address that is specified in double quotes.
+    
+browser has its own storage space - local storage- few amount of data can only be store
+
+key : value - where both key and value are string
+
+method to do operations in local storage
+---------------------------------------
+1) setItem("key","value") - to add data to the local storage
+2) getItem("key") - to retrieve data from the local storage
+3) removeItem("key") - to delete data from local storage.
+
+JSON.stringify - to convert into string
+
+
+API - Application programming Interface
+---------------------------------------
+to communicate with softwares available in internets
+
+different - scope
+----------
+1) public API - publicly available
+2) partner API - one company to another company data sharing - authentication
+3) private API - with a company
+4) composite API -interconnected api
+
+
+HTTP  - hypertext transfer protocol
+-------------------------
+- protocol - set of rules --- 
+
+refer :HTTPS, FTP, SMTP, TCP, UDP etc
+
+HTTP Vs HTTPS 
+HTTPS is http with encryption and verification hence it is more secure, benefit of search engine optimization(SEO), increased site performance
+
+
+http method
+1) get - to retrieve/read data from the destination
+2) post - to add data to the destination
+3) put - to update data
+4) delete - to remove data
+
+request have two parts
+1) head - to more security/authentication
+2) body - holds sharing data
+
+response status
+--------------
+1) 1xx series - information
+2) 2xx series - successful response
+3) 3xx series - redirection
+4) 4xx series - client side error
+5) 5xx series - server side error
+
+
+
+xml/JSON
+
+JSON - javaScript object notation
+- it is a formate for sharing data through internet
+
+syntax
+{
+  "key":value
+}
+1) data should be key value pair
+2) should be separated by commas
+3) curly bracket to hold the object
+4) square bracket to hold the array
+
+
+1) JSON.Stringify()- convert into a string
+2) JSON.parse() - parse a string to a javaScript object
+
+
+url = unifrom resourse locate
+----------------------------
+it is the resource address in the internet
+
+REST API- representational state transfer
+ its a software architecture style that was created to guide the design and developemnt of web.
+
+REFER :SOAP(Simple object access protocol),RPC(remote orocedural call)
+
+
+testing tool for api
+--------------------
+1) postman
+2) thunder client - extension of vscode
+
+
+how to create api using js
+--------------------------
+1) Ajax - Asynchronous javaScript XML 
+   - XMLHTTPrequest class used
+   - open()- to establish api connection
+   - send() - to send request
+   - readyState - changes value from 1 to 4 - when value is 4 ,response is received
+   - onreadystatechange method(arrow function) - to know about the change of the readyState
+   -responseText - where the response is present
+
+2) fetch()   
+      fetch uses the concept of promise class
+
+      Promise()
+      -------
+      state
+      - resolve - .then()
+      - pending 
+      - reject - .catch()
+  -Fetch('url')
+  - json()- removes the unnecessary data and returns a promise object that resolves to a javascript object(bodytext - json)
+
+3) async - await  
+ 
+   Advantage 
+     1) can be stored to a variable
+     2) only one .then() is used   
+     
+      
+
+

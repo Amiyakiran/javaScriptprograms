@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header style="width: 100%; height: 300px; background-image: url('https://www.techquintal.com/wp-content/uploads/2021/05/Information-Technology.jpg'); background-position:top; ">
+        <nav class="navbar bg-transparent">
+            <div class="container-fluid">
+              <a class="navbar-brand text-light" href="#">
+                <i class="fa-solid fa-bars fa-2x ms-3 mt-3"></i>
+                <span class="ms-3 mt-3" style="font-size: 30px;">DashBoard</span>
+              </a>
+              <div>
+                <button onclick="logout()" type="button" class="text-light btn" style="font-size: 20px;"><i class="fa-solid fa-circle-user"></i> Log Out</button>
+              </div>
+            </div>
+          </nav>
+    </header>
+   <div class="container">
+        <h1 class="text-center mt-5 text-primary">Welcome <span id="username" style="color: red;">user</span></h1>
+        <p class="mt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi doloremque porro, perspiciatis quaerat maiores, corrupti eveniet rerum consequuntur odit at dignissimos aliquam similique amet est expedita corporis nulla, modi cupiditate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus perferendis quos labore vero vel veniam deleniti doloremque unde, odio, dolorem veritatis quidem iste, illo quam? Quo doloribus in tenetur tempore.</p>
+   </div>
+    
+</body>
+<script>
+    let user = localStorage.getItem("user")
+    /* username.innerHTML=user */
+    if(!user){
+      alert('Please login')
+      //navigate
+      window.location ="login.html"
+    }
+    else{
+      username.innerHTML=user
+    }
+
+    function logout(){
+      //navigative 
+      localStorage.removeItem("user")
+      window.location='login.html'
+    }
+
+</script>
+</html>
