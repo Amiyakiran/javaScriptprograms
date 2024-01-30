@@ -459,7 +459,13 @@ how to access html elements using js
 
 2)document.getElementById('id') - return corresponding tag
 
+ -The easiest way to find an HTML element in the DOM, is by using the element id.
+ - if the element is found, the method will return the element as an object (in element).
+
+If the element is not found, element will contain null.
+
 3)document.getElementByClassName('class_name') - returns html collection
+       - If you want to find all HTML elements with the same class name, use getElementsByClassName().
 
 4)document.querySelector('tag_name/#id/.class_name') return tag - first satisfy tag
 
