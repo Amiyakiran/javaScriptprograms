@@ -80,3 +80,28 @@ for(row=1;row<=5;row++){
     }
    console.log(str);
 }
+
+
+/*              1
+              2 3 4
+            5 6 7 8 9
+        10 11 12 13 14 15 16
+     17 18 19 20 21 22 23 24 25     */
+
+let variable = 1;
+// outer loop runs for `rows` no. of times
+for (let row = 1; row <= 5; row++) {
+    str = " "
+   // Inner Loop - I -> for the spaces
+   for (let space = 1; space <= 5 - row; space++) {
+      str += " ";
+   }
+
+   // Inner Loop - II -> for the series of numbers
+   for (let col = 1; col <= 2 * row - 1; col++) {
+      str += variable+" ";
+      variable++;
+   }
+
+   console.log(str);
+}
