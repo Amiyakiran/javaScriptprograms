@@ -35,6 +35,12 @@ console.log(wc);
 
 //numArray = [10,20,30,40,30,20,50,30,60,70,10,40,80]
 // w.a.p to find the number count
+obj = {}
+arr.map(item=>item in obj?obj[item]+=1:obj[item]=1)
+console.log(obj);
 
 //pattern : ABBAABAB
 //w.a.p to print the first recursive letter -B
+
+obj1={}
+Array.from(pattern).map(item=>item in obj1?console.log(`first recursive letter is ${char}`):obj1[item]=1)
