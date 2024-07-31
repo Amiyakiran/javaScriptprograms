@@ -77,7 +77,24 @@ for(row=1;row<=5;row++){
 }
 console.log('-------------------------------');
 
+//updated
+for(row=1;row<=9;row++){
+        if(row<=5){
+            str=""
+            for(col=1;col<=row;col++){
+                str = str+"* "
+            }
+            console.log(str);
+        }
+        else{
+            str=""
+            for(col=1;col<=(9-row)+1;col++){
+                str= str+"* "
+            }
+            console.log(str);
+        }
 
+    }
 
 
 
