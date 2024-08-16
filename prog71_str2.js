@@ -3,3 +3,5 @@ text='please visit microsoft.microsoft is too far'
 console.log(text);
 text1= text.replaceAll('microsoft','google')
 console.log(text1);
+
+
