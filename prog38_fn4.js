@@ -1,3 +1,9 @@
+//why es6 version of js arrow function is prefered over regular function?
+//1.1. Concise Syntax - You can omit the function keyword, curly braces, and even the return keyword (for single-expression functions).
+//2. implicit return - For single-expression functions, arrow functions allow for an implicit return, saving you the need to use the return keyword explicitly.
+
+
+
 //w.a.p to find the sum of three numbers
 //syntax
 //  variable = (arg1,----------argn) => {statement  }
